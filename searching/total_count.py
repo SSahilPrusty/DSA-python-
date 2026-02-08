@@ -2,7 +2,7 @@
 
 Input 1: a = [0,0,0,0,1,1]  
 Output 1: 2'''
-
+#----------------------binary search----------------------
 def count_ones(arr):
     n = len(arr)
     low, high = 0, n - 1
@@ -23,6 +23,18 @@ def count_ones(arr):
     return n - first_one
 
 
+#----------------------linear search-----------------------
+
+def count_ones_linear_optimized(arr):
+    n = len(arr)
+    for i in range(n):
+        if arr[i] == 1:
+            return n - i   # remaining are all 1s
+    return 0
+
+
+
 # Example
 a = [0,0,0,0,1,1]
 print(count_ones(a))
+print(count_ones_linear_optimized(a))
