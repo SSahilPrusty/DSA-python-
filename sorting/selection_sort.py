@@ -1,15 +1,16 @@
 '''
-the algo proceeds by finding the smallest (or thr largest ,depending on the storing order )element in the unsorted sublist , exchanging (swaping)
+the algo proceeds by finding the smallest (or thr largest ,depending on the storing order )element in the unsorted sublist ,
+exchanging (swaping)
 it with left most element (putting it in sorted odered) and makeing the sublist boundraies one element to the right
 '''
 def selection_sort(arr):
     #size of the array
     n= len(arr)
-    for i in range (n):
+    for i in range (n):#python for(start,end)like (5)->0,1,2,3,4
         # asuming the element in i is the minimum
         min_index=i
         #finding the smallest element index in the remaing unsorted part
-        for j in range(i+1,n):
+        for j in range(i+1,n):    #python for(start,end)like (5)->0,1,2,3,4
             if (arr[j]<arr[min_index]):
                 min_index=j
         #swap the found min element with the 1ST element
